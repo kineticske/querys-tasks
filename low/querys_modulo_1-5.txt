@@ -27,3 +27,6 @@ select * from sakila.category where name not in ('Action', 'Animation', 'Childre
 -- between
 select * from sakila.rental where customer_id between 300 and 350;
 select * from sakila.payment where amount not between 3 and 5;
+-- like 
+select * from sakila.actor where first_name like 'a%'  ''empiece con a''
+select * from sakila.actor where first_name like 'a%' and last_name like 'b%';
