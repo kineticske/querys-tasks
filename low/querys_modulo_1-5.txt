@@ -30,3 +30,6 @@ select * from sakila.payment where amount not between 3 and 5;
 -- like 
 select * from sakila.actor where first_name like 'a%'  ''empiece con a''
 select * from sakila.actor where first_name like 'a%' and last_name like 'b%';
+-- inner join 
+select f.title, f.description, f.release_year, f.language_id, l.name from sakila.film f
+inner join sakila.language l on (f.language_id = l.language_id); -- ambas unidas por language_id
