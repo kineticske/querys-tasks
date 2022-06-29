@@ -79,3 +79,14 @@ sexo char(1)
 );
 drop table datosPersonales3;
 create index idx_apellido on datosPersonales3 (apellido);
+
+-- if exits
+create database if not exists aaa;
+use aaa;
+create table if not exists prueba (
+id int
+);
+show tables;
+drop table if exists prueba;
+use infinite;
+drop table if exists datosPersonales3;
