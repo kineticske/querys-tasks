@@ -27,3 +27,13 @@ show tables;
 -- ELIMINAR TABLAS
 use infinite;
 drop table persona2;
+
+-- uso de null & not null 
+use infinite;
+create table valores (nombre varchar(20));
+use infinite;
+alter table valores add apellido varchar(20) not null;
+-- renombrar tablas
+alter table personas1 rename Personas;
+rename table personas1 to personas;
+rename table personas1 to personas, valores1 to valores;
