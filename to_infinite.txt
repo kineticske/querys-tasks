@@ -1,0 +1,29 @@
+CREATE DATABASE infinite; 
+use infinite;
+-- crear tabla
+create table personas(
+	ID int,
+    Nombre varchar(20),
+    Apellido varchar(20),
+    edad INT
+);
+create table infinite.persona2(ID int);
+-- creando campo en tabla
+use infinite;
+alter table persona2 add nombre varchar(20);
+alter table persona2 add apellido varchar(20), add edad int;
+-- alterando nombre de campo
+use infinite;
+alter table persona2 change edad edad1 int;
+-- modificar tipo de campo
+use infinite;
+alter table persona2 modify edad1 date;
+-- eliminar campo 
+use infinite;
+alter table persona2 drop edad1;
+-- ver tablas
+use infinite;
+show tables;
+-- ELIMINAR TABLAS
+use infinite;
+drop table persona2;
