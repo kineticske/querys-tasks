@@ -37,3 +37,45 @@ alter table valores add apellido varchar(20) not null;
 alter table personas1 rename Personas;
 rename table personas1 to personas;
 rename table personas1 to personas, valores1 to valores;
+
+
+-- indices
+use infinite;
+create table datosPersonales(
+ID int auto_increment,
+Nombre varchar(20),
+Apellido varchar(20),
+edad int,
+cedula varchar(20),
+pasaporte varchar(100),
+sexo char(1),
+primary key (ID),
+unique cedula (cedula),
+unique pasaporte (pasaporte),
+fulltext index nombre(nombre),
+index apellido(apellido)
+);
+
+#drop table datosPersonales;
+show tables;
+create table datosPersonales2(
+ID int primary key,
+Nombre varchar(20),
+Apellido varchar(20),
+edad int,
+cedula varchar(20),
+pasaporte varchar(100),
+sexo char(1)
+);
+#drop table datosPersonales2;
+create table datosPersonales3(
+ID int,
+Nombre varchar(20),
+Apellido varchar(20),
+edad int,
+cedula varchar(20),
+pasaporte varchar(100),
+sexo char(1)
+);
+drop table datosPersonales3;
+create index idx_apellido on datosPersonales3 (apellido);
